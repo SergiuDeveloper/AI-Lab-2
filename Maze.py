@@ -91,7 +91,20 @@ class Maze(object):
                 print(y + " ", end="")
             print("")
 
-    # def __solve_maze(self, coordinate_x, coordinate_y):
+    def solve_maze(self, coordinate_x, coordinate_y):
+        solution = [[0 for j in range(coordinate_x)] for i in range(coordinate_y)]
+
+        if not self.__backtracking_method(self.__maze_matrix,
+                                          self.__starting_position,
+                                          self.__destination_position,
+                                          solution):
+            print("Solution doesn't exist")
+            return False
+
+        self.__print_solution(solution)
+        return True
+
+
 
 
 

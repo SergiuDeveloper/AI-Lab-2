@@ -22,3 +22,8 @@ if __name__ == '__main__':
     print(maze_matrix)
 
     maze = Maze(maze_matrix, (13, 15), (14, 25), maze_x_size, maze_y_size)
+
+    print("Backtracking Method:")
+    maze.solve_maze((13, 15), (14, 25))
+
+    
